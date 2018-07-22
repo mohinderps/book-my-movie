@@ -6,4 +6,4 @@ A BoilerPlate for React Apps.
 
 * Clone the repo
 * Run `npm install`
-* Run `npm start`
+* Run `npm run dev`
