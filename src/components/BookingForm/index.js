@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './style.scss';
 
 class BookingForm extends React.Component {
@@ -14,7 +15,7 @@ class BookingForm extends React.Component {
   }
 
   render() {
-    const {seats} = this.props;
+    const {seats, match, movieId} = this.props;
     return (
       <div className="BookingForm">
         <div className="text-center">Select Category</div>
@@ -29,7 +30,7 @@ class BookingForm extends React.Component {
           <li>{this.price('gold')}</li>
           <li>{this.availability('gold')}</li>
           <li>
-            <button type="button" className="primary-button no-padding">Book</button>
+            <Link to={`${match.url}/movie/${movieId}/category/Gold/confirmed`} ><button type="button" className="primary-button no-padding">Book</button></Link>
           </li>
         </ul>
         <ul className="inline-list category-list text-center">
@@ -37,7 +38,7 @@ class BookingForm extends React.Component {
           <li>{this.price('platinum')}</li>
           <li>{this.availability('platinum')}</li>
           <li>
-            <button type="button" className="primary-button no-padding">Book</button>
+            <Link to={`${match.url}/movie/${movieId}/category/Platinum/confirmed`}><button type="button" className="primary-button no-padding">Book</button></Link>
           </li>
         </ul>
       </div>

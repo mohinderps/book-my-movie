@@ -3,6 +3,7 @@ import './style.scss';
 import Search from '../Search';
 import Cinemas from '../Cinemas';
 import Movies from '../Movies';
+import Confirmation from '../Confirmation';
 import data from '../Data';
 import {Route} from 'react-router-dom';
 
@@ -37,6 +38,9 @@ class App extends Component {
           handleSearchTermChange={this.handleSearchTermChange}
           cinemaList={data}
           match={match}/> } />
+
+        <Route exact path="/cinema/:cinemaId/movie/:movieId/category/:categoryId/confirmed"
+          render={({match}) => <Confirmation match={match}/> } />
       </div>
     );
   }

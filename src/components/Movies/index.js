@@ -15,11 +15,11 @@ class Movies extends React.Component {
 
   render() {
     const movies = this.getMovies();
-    const {searchTerm} = this.props;
+    const {searchTerm, match} = this.props;
     return (
       <div className="Movies">
         {movies.filter(filterMovies(searchTerm))
-          .map(item => <Movie key={item.id} {...item} />)}
+          .map(item => <Movie key={item.id} {...item} match={match} />)}
       </div>
     );
   }

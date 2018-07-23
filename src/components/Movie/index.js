@@ -7,7 +7,7 @@ import * as posters from '../Data/posters';
 
 class Movie extends React.Component {
   render() {
-    const {name, seats, poster} = this.props;
+    const {id, name, seats, poster, match} = this.props;
     return (
       <div className="Movie">
         <div className="poster">
@@ -18,7 +18,7 @@ class Movie extends React.Component {
           <div>
             <ModalLauncher launcherTitle="Book Tickets"
               launcherClass="primary-button">
-              <BookingForm seats={seats} />
+              <BookingForm seats={seats} match={match} movieId={id}/>
             </ModalLauncher>
           </div>
         </div>
