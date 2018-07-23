@@ -1,0 +1,18 @@
+.Search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  padding: 20px 0;
+  text-align: center;
+
+  input {
+    width: 70%;
+    border: none;
+    border-radius:5px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+}

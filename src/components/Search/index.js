@@ -18,7 +18,7 @@ class Search extends React.Component{
     const {searchTerm} = this.props;
     return (
       <div className="Search">
-        <input value={searchTerm} onChange={this.onSearchChange} />
+        <input value={searchTerm} onChange={this.onSearchChange} placeholder="Search for Cinemas"/>
       </div>
     );
   }
