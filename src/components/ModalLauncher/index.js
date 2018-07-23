@@ -26,15 +26,17 @@ class ModalLauncher extends React.Component {
 
   render() {
     const {show} = this.state;
-    const {buttonTitle, buttonClass, children} = this.props;
+    const {launcherTitle, launcherClass, children} = this.props;
     return (
       <div>
         <Modal handleClose={this.hideModal} show={show}>
           {children}
         </Modal>
-        <button type="button"
-          className={buttonClass}
-          onClick={this.showModal}>{buttonTitle}</button>
+        <div className="text-center">
+          <button type="button"
+            className={launcherClass}
+            onClick={this.showModal}>{launcherTitle}</button>
+        </div>
       </div>
     );
   }

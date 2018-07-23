@@ -12,10 +12,20 @@ class Cinemas extends React.Component {
     return (
       <div className="Cinemas">
         {cinemasList.filter(filterCinemas(searchTerm))
-          .map(item => <Cinema key={item.id} id={item.id} name={item.name} />)
+          .map(item => <Cinema key={item.id}
+            id={item.id}
+            name={item.name}
+            movies={item.movies}
+            fromGradient={item.fromGradient}
+            toGradient={item.toGradient}/>)
         }
       </div>
     );
+  }
+
+  componentWillUnmount() {
+    const {handleSearchTermChange} = this.props;
+    handleSearchTermChange('');
   }
 }
 

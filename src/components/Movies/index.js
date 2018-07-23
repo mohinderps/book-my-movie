@@ -23,6 +23,11 @@ class Movies extends React.Component {
       </div>
     );
   }
+
+  componentWillUnmount() {
+    const {handleSearchTermChange} = this.props;
+    handleSearchTermChange('');
+  }
 }
 
 export default Movies;

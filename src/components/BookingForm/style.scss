@@ -1,0 +1,20 @@
+.BookingForm {
+
+  .header {
+    border-top: 1px solid #EFEFEF;
+    border-bottom: 1px solid #EFEFEF;
+    margin-top: 40px;
+  }
+
+  .category-list {
+    li {
+      width: 150px;
+      padding: 10px;
+    }
+  }
+
+  .no-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

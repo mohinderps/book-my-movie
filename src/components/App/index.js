@@ -29,7 +29,8 @@ class App extends Component {
 
         <Route exact path="/" render={() => <Cinemas
           searchTerm={searchTerm}
-          cinemasList={data} /> } />
+          cinemasList={data}
+          handleSearchTermChange={this.handleSearchTermChange} /> } />
 
         <Route exact path="/cinema/:cinemaId" render={({match}) => <Movies
           searchTerm={searchTerm}

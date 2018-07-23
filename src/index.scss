@@ -15,3 +15,36 @@ a{
   text-decoration: none;
   color: inherit;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.inline-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.primary-color {
+  color: #0099FF;
+}
+
+.primary-button {
+  background: #ffffff;
+  color: #0099ff;
+  font-size: 80%;
+  font-family: inherit;
+  padding: 5px 10px;
+  border: 1px solid #0099ff;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background: #0099ff;
+    color: #ffffff;
+  }
+
+}
