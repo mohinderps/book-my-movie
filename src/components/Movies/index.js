@@ -19,7 +19,7 @@ class Movies extends React.Component {
     return (
       <div className="Movies">
         {movies.filter(filterMovies(searchTerm))
-          .map(item => <Movie key={item.id} name={item.name} />)}
+          .map(item => <Movie key={item.id} {...item} />)}
       </div>
     );
   }
