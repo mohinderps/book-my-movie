@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.scss';
-import cinemas from '../Data';
 import Cinema from '../Cinema';
 
 const filterCinemas = function(searchTerm) {
@@ -9,11 +8,11 @@ const filterCinemas = function(searchTerm) {
 
 class Cinemas extends React.Component {
   render() {
-    const {searchTerm} = this.props;
+    const {searchTerm, cinemasList, handleSearchTermChange} = this.props;
     return (
       <div className="Cinemas">
-        {cinemas.filter(filterCinemas(searchTerm))
-          .map(item => <Cinema key={item.id} name={item.name}/>)
+        {cinemasList.filter(filterCinemas(searchTerm))
+          .map(item => <Cinema key={item.id} id={item.id} name={item.name} />)
         }
       </div>
     );

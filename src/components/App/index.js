@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import './style.scss';
 import Search from '../Search';
 import Cinemas from '../Cinemas';
+import Movies from '../Movies';
+import data from '../Data';
+import {Route} from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +26,16 @@ class App extends Component {
     return (
       <div className="App">
         <Search searchTerm={searchTerm} handleSearchTermChange={this.handleSearchTermChange}/>
-        <Cinemas searchTerm={searchTerm} />
+
+        <Route exact path="/" render={() => <Cinemas
+          searchTerm={searchTerm}
+          cinemasList={data} /> } />
+
+        <Route exact path="/cinema/:cinemaId" render={({match}) => <Movies
+          searchTerm={searchTerm}
+          handleSearchTermChange={this.handleSearchTermChange}
+          cinemaList={data}
+          match={match}/> } />
       </div>
     );
   }
